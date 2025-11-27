@@ -15,3 +15,18 @@ i = 1
 while(i<11):
     print(f"5 * {i} = {num*i}")
     i = i + 1
+
+#
+num = int(input("Enter a number to check if it is prime or not: "))
+count = 0
+if num <= 1:
+    print("not prime")
+else:
+    for i in range(2,num-1):
+        if num % i == 0:
+            count = 1
+
+    if count == 1:
+        print("not prime")
+    else:
+        print("prime")
