@@ -31,7 +31,7 @@ for i in range(n):
             print(" ",end = " ")
     print()
 
-
+#to print reverse table
 n = 5
 for i in range(10,0,-1):   #(starts on 10,stops at 0, and goes back by -1)
     print(n*i)
