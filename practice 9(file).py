@@ -54,3 +54,16 @@ with open ("donkey.txt","r") as f2:
     string = string.replace("donkey","####")
 with open ("donkey.txt","w") as f2:
     f2.write(string)
+#to copy this content in other file make a variable to read the file from the original file and then use that variable to write the content to new file 
+
+#to check if file is identical
+with open("donkey.txt","r") as f1,open("this.txt","r") as f2:
+    content1 = f1.read()
+    content2 = f2.read()
+
+if content1 == content2:  
+    print("files are identical")
+else:
+    print("files are different")
+
+#just opening a file in write mode clears all content of the file and follow with pass statement
