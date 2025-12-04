@@ -22,3 +22,40 @@ class Student:
 student1 = Student("Saket",9.5)
 print(student1.get_info())    #instance method called
 print(Student.get_count())    #classmethod called
+
+
+#GETTER SETTER DECORATOR
+class Student:
+    def __init__(self, name, grade):
+        # private attribute (convention: underscore prefix)
+        self._name = name
+        self._grade = grade
+
+    @property
+    def grade(self):
+        """
+        Getter method for grade.
+        Allows controlled access to the private _grade attribute.
+        """
+        return self._grade
+
+    @grade.setter
+    def grade(self, value):
+        """
+        Setter method for grade.
+        Adds validation before updating the private _grade attribute.
+        """
+        if 0 <= value <= 100:
+            self._grade = value
+        else:
+            raise ValueError("Grade must be between 0 and 100.")
+
+# Example usage
+student1 = Student("Saket", 85)
+
+print("Initial Grade:", student1.grade)   # calls getter
+
+student1.grade = 92                       # calls setter
+print("Updated Grade:", student1.grade)
+
+# student1.grade = 150  # ❌ raises ValueError
