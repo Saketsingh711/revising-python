@@ -1,4 +1,5 @@
 #operator overloading using dunder(double underscore) methods
+# These methods are called when a given operator is used on the objects.
 class ComplexNumber:
     def __init__(self,real_no,imaginary_no):
         self.real_no = real_no
